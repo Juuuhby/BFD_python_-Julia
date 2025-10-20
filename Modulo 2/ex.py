@@ -121,3 +121,42 @@ cliente1.informaçao_cliente()
 cliente1.alterar_cliente("Rua Zumbi dos Palmares")
 cliente1.informaçao_cliente()
 
+# 3 - Suponha que você faz parte de uma equipe de desenvolvimento para softwares de astronomia e irá criar um protótipo expansível de sistema solar, para isso siga as definições:
+# A - Crie uma classe Planeta, ela deve ser inicializada com os parâmetros: nome, raio_equatorial, distancia_do_sol e composicao.
+# B - O raio_equatorial deve ser em km, a distancia_do_sol em milhões de km e composição "Rochoso" ou "Gasoso".
+# C - Adicione um método de apresentação, sem parâmetros, que mostre na tela as informações do planeta.
+# D - Fora da classe, crie uma função que calcule e retorne o valor da distância do planeta instanciado até o SOL em UA (Unidades Astronômicas, representada pela distância da terra até o Sol, aproximadamente 150 milhões de km). Utilize a fórmula: distancia_do_sol / 150. Essa função deve receber como parâmetro o atributo distancia_do_sol da classe planeta, ou seja, deve funcionar para qualquer objeto do tipo planeta.
+# Pesquisa na internet pelas informações de 3 planetas e as utilize para instanciar 3 objetos. Execute o método de apresentação e a função de distância para cada um dos objetos instanciados.
+
+class Planeta:
+
+    def __init__(self,nome,raio_equatorial,distancia_do_sol,composiçao):
+        self.nome = nome
+        self.raio_equatorial = raio_equatorial
+        self.distancia_do_sol = distancia_do_sol
+        self.composiçao = composiçao
+        self.distancia = distancia(raio_equatorial)
+
+    def apresentaçao(self):
+        print(f"----------Informações do Planeta {self.nome}----------")
+        print(f"O seu raio equatorial é {self.raio_equatorial} km.")
+        print(f"A sua distância até o Sol é de {self.distancia_do_sol} milhões de km.")
+        print(f"E ele é um planeta {self.composiçao}.")
+        print("---------------------------------------------------------")
+
+def distancia(distancia_km):
+    return distancia_km / 150.0
+
+planeta1 = Planeta("Terra", 6378, 149.6 , "rochoso")
+planeta2 = Planeta("Marte", 3390, 228, "rochoso")
+planeta3 = Planeta("Vênus", 6052, 108, "rochoso")
+
+planeta1.apresentaçao()
+planeta2.apresentaçao()
+planeta3.apresentaçao()
+distancia_ua = distancia(planeta1.distancia_do_sol)
+print(distancia_ua)
+distancia_ua = distancia(planeta2.distancia_do_sol)
+print(distancia_ua)
+distancia_ua = distancia(planeta3.distancia_do_sol)
+print(distancia_ua)
