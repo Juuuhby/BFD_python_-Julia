@@ -1,3 +1,62 @@
+# 1 - Construa uma classe para armazenar informações de carros, cada objeto instanciado por essa classe deve ter os seguintes atributos:
+# A - Modelo, marca, ano de lançamento, potência (1.0,1.6,etc), tipo de câmbio (manual ou automático), preço no lançamento.
+# B - Crie um método para retornar cada atributo.
+# Crie ao menos 3 instâncias de objeto, e execute todos os métodos para teste.
+
+class Carros:
+
+    def __init__(self,modelo,marca,ano_lançamento,potencia,tipo_cambio,preço_lançamento):
+        self.modelo = modelo
+        self.marca = marca
+        self.ano_lançamento = ano_lançamento
+        self.potencia = potencia
+        self.tipo_cambio = tipo_cambio
+        self.preço_lançamento = preço_lançamento
+
+    def ficha_tecnica(self):     
+        print("------------------Ficha Técnica------------------------")
+        print(f"Marca: {self.marca}")
+        print(f"Modelo: {self.modelo}")
+        print(f"Ano de Lançamento: {self.ano_lançamento}")
+        print(f"Potência: {self.potencia}")
+        print(f"Tipo de câmbio: {self.tipo_cambio}")
+        print(f"Preço no ano de Lançamento: {self.preço_lançamento}")
+        print("-------------------------------------------------------")
+        
+    def modelo_carro(self):
+        print(self.modelo)
+
+    def marca_carro(self):
+        print(self.marca)
+        
+    def ano_carro(self):
+        print(self.ano_lançamento)
+
+    def pot(self):
+        print(self.potencia)
+
+    def cambio(self):
+        print(self.tipo_cambio)
+
+    def preço(self):
+        print(self.preço_lançamento)
+
+        
+car1 = Carros("Lancer","Mitsubishi",2016,2.0,"Automatico","R$68.990")
+car2 = Carros("A3","Audi",2016,1.4,"Automatico","R$137.990")
+car3 = Carros("Impala","Chevrolet",1967,155,"Automatico","US$3.300")
+
+car1.ficha_tecnica()
+car2.ficha_tecnica()
+car3.ficha_tecnica()
+car3.ano_carro()
+car3.cambio()
+car3.marca_carro()
+car3.modelo_carro()
+car3.preço()
+car3.pot()
+
+
 # 2 - Suponha que estamos desenvolvendo um sistema para um banco. Este sistema deve obedecer as seguintes restrições:
 # A - Uma classe pai chamada Cliente, com os atributos: nome, cpf, endereço.
 # B - Uma classe filha chamada Conta_Corrente que deve herdar os atributos da classe pai mais o atributo "saldo". Este atributo deve ser privado.
