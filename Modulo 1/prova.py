@@ -24,3 +24,45 @@
 # print(f"A menor temperatura é: {a}")
 # print(f"A maior temperatura é: {b}")
 # print(f"A média das temperaturas é: {c:.2f}")
+
+# #Atividade número 3
+
+# def menu():
+#     print("Menu \n" 
+#         "A - Criar estoque.\n" 
+#         "B - Adicionar itens utilizando o nome do item e a quantidade.\n" \
+#         "C - Consultar um item, utilizando o nome do produto.\n" \
+#         "D - Atualizar a quantidade em estoque de um item.\n" \
+#         "E - Exibir o estoque final.\n" \
+#         "F - Sair do programa.")
+
+# estoque = {}
+# running = True
+
+# while running:
+#     menu()
+#     n = str(input("Escolha a sua opção: "))
+#     if n == "A" or n == "a":
+#         estoque = {}
+#         print("Você criou um estoque.")
+#     elif n == "B" or n == "b":
+#         nome = str(input("Adicione o item: "))
+#         qntd = int(input("A quantidade do item: "))
+#         estoque[nome] = qntd
+#         print(estoque[nome])
+#     elif n == "C" or n == "c":
+#         consultar = str(input("Item que você procura: "))
+#         item = estoque[consultar]
+#         print(item)
+#     elif n == "D" or n == "d":
+#         conteudo = str(input("Item que deseja alterar quantidade: "))
+#         mudar = str(input("Quantidade do item: "))
+#         estoque[conteudo] = mudar
+#         print(estoque[conteudo])
+#     elif n == "E" or n == "e":
+#         print(estoque)
+#     elif n == "F" or "f":
+#         print("Você saiu do programa.")
+#         break 
+#     else:
+#         print("Essa opção não existe. Tente novamente.")
