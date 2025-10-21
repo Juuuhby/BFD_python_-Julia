@@ -66,3 +66,18 @@
 #         break 
 #     else:
 #         print("Essa opção não existe. Tente novamente.")
+
+# #Atividade 4
+# def converter_medidas():
+#     n = str(input("Celsius ou Fanhrenheit: "))
+#     m = float(input("Valor a ser convertido: "))
+    
+#     if n == "Celsius" or n == "celsius":
+#         calc = ( m * 9 / 5) + 32
+#         print(f"O valor de {m}° C convertido para Fanhrenheit é {calc:.1f}° F.")
+
+#     elif n == "Fanhrenheit" or n == "fanhrenheit":
+#         calc1 = ( m - 32) * 5 / 9
+#         print(f"O valor de {m}° F convertido para Fanhrenheit é {calc1:.1f}° C ")
+
+# converter_medidas()
