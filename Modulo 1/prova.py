@@ -14,3 +14,13 @@
 #     calc2 = ( f - 32) * 5 / 9
 #     print(f"A conversão de {f}° F para celsius é {calc2:.1f}° C.")
 
+# #Atividade número 2
+# temperaturas = [28.5, 29.1, 27.3, 25.4, 23.9, 22.7, 22.1, 23.5, 24.6, 26.8, 27.9, 28.8]
+
+# a = min(temperaturas)
+# b = max(temperaturas)
+# c = sum(temperaturas) / 12
+
+# print(f"A menor temperatura é: {a}")
+# print(f"A maior temperatura é: {b}")
+# print(f"A média das temperaturas é: {c:.2f}")
